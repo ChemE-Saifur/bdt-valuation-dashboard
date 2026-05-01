@@ -20,7 +20,6 @@
     .medium { font-weight: 700; color: #92400e; }
     .low { font-weight: 700; color: #065f46; }
     .formula { background: #0f172a; color: #f8fafc; padding: 14px; border-radius: 10px; font-family: Consolas, Monaco, monospace; font-size: 14px; overflow-x: auto; line-height: 1.55; white-space: pre-wrap; }
-    .note, .source-note { color: #4b5563; font-size: 13px; line-height: 1.55; }
     .warning { background: #fff7ed; border-left: 5px solid #f97316; padding: 14px; border-radius: 10px; line-height: 1.55; margin-top: 18px; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 12px; }
     .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; background: #ffffff; }
@@ -32,11 +31,11 @@
 <body>
   <div class="wrap">
     <h1>BDT Valuation Dashboard vs INR, VND and RMB</h1>
-    <div class="meta">Updated: 30 April 2026. Base date: 30 April 2026. Status: weekly automated dashboard.</div>
+    <div class="meta">Updated: 01 May 2026. Base date: 1 January 2025. Status: weekly automated dashboard.</div>
 
     <div class="summary">
-      <strong>Current dashboard verdict:</strong> BDT is near fair value against direct export competitors, based on the accumulated inflation-adjusted movement of BDT against INR, VND and CNY since 30 April 2026.
-      This model directly tests whether BDT has depreciated enough to offset Bangladesh's inflation differential with export competitors.
+      <strong>Current dashboard verdict:</strong> BDT is near fair value against direct export competitors, based on cumulative inflation differentials since 1 January 2025.
+      This model tests whether BDT has depreciated enough to offset Bangladesh's accumulated inflation gap with India, Vietnam and China.
     </div>
 
     <h2>1. Current Valuation Table</h2>
@@ -44,7 +43,7 @@
       <thead>
         <tr>
           <th>Comparator</th>
-          <th>Latest FX / Inflation Signal</th>
+          <th>FX / Inflation Signal</th>
           <th>Estimated BDT Misalignment</th>
           <th>Interpretation for Bangladesh Exporters</th>
           <th>Confidence</th>
@@ -56,24 +55,25 @@
   <td>Broad REER anchor</td>
   <td>REER-implied USD/BDT: 126.03. Market USD/BDT: 122.62.</td>
   <td class="medium">BDT overvalued by about 2.78%</td>
-  <td>This is the broad economy-wide REER anchor. It suggests modest BDT overvaluation.</td>
+  <td>This is the broad economy-wide REER anchor. It is separate from the bilateral cumulative inflation model.</td>
   <td>Medium-High</td>
 </tr>
 
 <tr>
   <td>BDT vs INR</td>
   <td>
-    Base cross rate: 1.293637 BDT per INR.<br>
+    Base cross rate on 1 January 2025: 1.401869 BDT per INR.<br>
     Actual current cross rate: 1.293637.<br>
-    Required inflation-adjusted rate: 1.293637.
+    Required inflation-adjusted rate: 1.401869.
   </td>
-  <td class="medium">
-    Near fair value by 0.00%
+  <td class="high">
+    BDT overvalued by 8.37%
   </td>
   <td>
-    Inflation gap since base date: 0.00%.<br>
-    Actual nominal BDT adjustment: 0.00%.<br>
-    If the inflation gap is larger than actual depreciation, BDT becomes overvalued in real terms.
+    Cumulative inflation gap since 1 January 2025: 0.00%.<br>
+    Required BDT adjustment: 0.00%.<br>
+    Actual BDT adjustment: -7.72%.<br>
+    If required depreciation is greater than actual depreciation, BDT is overvalued.
   </td>
   <td>Model-based</td>
 </tr>
@@ -81,17 +81,18 @@
 <tr>
   <td>BDT vs VND</td>
   <td>
-    Base cross rate: 0.004883 BDT per VND.<br>
+    Base cross rate on 1 January 2025: 0.004706 BDT per VND.<br>
     Actual current cross rate: 0.004883.<br>
-    Required inflation-adjusted rate: 0.004883.
+    Required inflation-adjusted rate: 0.004706.
   </td>
-  <td class="medium">
-    Near fair value by 0.00%
+  <td class="low">
+    BDT undervalued by -3.62%
   </td>
   <td>
-    Inflation gap since base date: 0.00%.<br>
-    Actual nominal BDT adjustment: 0.00%.<br>
-    If the inflation gap is larger than actual depreciation, BDT becomes overvalued in real terms.
+    Cumulative inflation gap since 1 January 2025: 0.00%.<br>
+    Required BDT adjustment: 0.00%.<br>
+    Actual BDT adjustment: 3.76%.<br>
+    If required depreciation is greater than actual depreciation, BDT is overvalued.
   </td>
   <td>Model-based</td>
 </tr>
@@ -99,26 +100,27 @@
 <tr>
   <td>BDT vs RMB / CNY</td>
   <td>
-    Base cross rate: 17.874636 BDT per CNY.<br>
+    Base cross rate on 1 January 2025: 16.438356 BDT per CNY.<br>
     Actual current cross rate: 17.874636.<br>
-    Required inflation-adjusted rate: 17.874636.
+    Required inflation-adjusted rate: 16.438356.
   </td>
-  <td class="medium">
-    Near fair value by 0.00%
+  <td class="low">
+    BDT undervalued by -8.04%
   </td>
   <td>
-    Inflation gap since base date: 0.00%.<br>
-    Actual nominal BDT adjustment: 0.00%.<br>
-    If the inflation gap is larger than actual depreciation, BDT becomes overvalued in real terms.
+    Cumulative inflation gap since 1 January 2025: 0.00%.<br>
+    Required BDT adjustment: 0.00%.<br>
+    Actual BDT adjustment: 8.74%.<br>
+    If required depreciation is greater than actual depreciation, BDT is overvalued.
   </td>
   <td>Model-based</td>
 </tr>
 
 <tr>
   <td>Overall competitor average</td>
-  <td>Average of INR, VND and CNY bilateral inflation-adjusted signals.</td>
-  <td class="medium">BDT is near fair value against direct export competitors: 0.00%</td>
-  <td>This is the accumulated real competitiveness signal since 30 April 2026.</td>
+  <td>Average of INR, VND and CNY bilateral cumulative inflation-adjusted signals.</td>
+  <td class="medium">BDT is near fair value against direct export competitors: -1.10%</td>
+  <td>This is the accumulated real competitiveness signal since 1 January 2025.</td>
   <td>Medium</td>
 </tr>
 
@@ -126,7 +128,7 @@
     </table>
 
     <h2>2. Base Data</h2>
-    <p>The base date fixes the starting exchange rates. From this date forward, the model measures whether BDT has adjusted enough for cumulative inflation differentials.</p>
+    <p>The base date is fixed at 1 January 2025. From this date onward, the model measures whether BDT has adjusted enough for cumulative inflation differentials.</p>
     <table>
       <thead>
         <tr>
@@ -137,12 +139,11 @@
       </thead>
       <tbody>
         
-<tr><td>Base date</td><td>30 April 2026</td><td>Starting point for all calculations.</td></tr>
-<tr><td>Base USD/BDT</td><td>122.62</td><td>Starting Taka exchange rate.</td></tr>
-<tr><td>Base USD/INR</td><td>94.787</td><td>Used to calculate base BDT/INR.</td></tr>
-<tr><td>Base USD/VND</td><td>25113.0</td><td>Used to calculate base BDT/VND.</td></tr>
-<tr><td>Base USD/CNY</td><td>6.86</td><td>Used to calculate base BDT/CNY.</td></tr>
-<tr><td>Base CPI index</td><td>100 for all countries</td><td>All CPI indices are normalized to 100 on the base date.</td></tr>
+<tr><td>Base date</td><td>1 January 2025</td><td>Starting point for measuring accumulated real overvaluation.</td></tr>
+<tr><td>Base USD/BDT</td><td>120.0</td><td>Replace with actual USD/BDT on or near 1 Jan 2025.</td></tr>
+<tr><td>Base USD/INR</td><td>85.6</td><td>Replace with actual USD/INR on or near 1 Jan 2025.</td></tr>
+<tr><td>Base USD/VND</td><td>25500.0</td><td>Replace with actual USD/VND on or near 1 Jan 2025.</td></tr>
+<tr><td>Base USD/CNY</td><td>7.3</td><td>Replace with actual USD/CNY on or near 1 Jan 2025.</td></tr>
 
       </tbody>
     </table>
@@ -162,33 +163,27 @@
 <tr><td>Current USD/INR</td><td>94.787</td><td>Update weekly.</td></tr>
 <tr><td>Current USD/VND</td><td>25113.0</td><td>Update weekly.</td></tr>
 <tr><td>Current USD/CNY</td><td>6.86</td><td>Update weekly.</td></tr>
-<tr><td>Bangladesh CPI index since base</td><td>100.0</td><td>Example: 103 means 3% cumulative inflation since base date.</td></tr>
-<tr><td>India CPI index since base</td><td>100.0</td><td>Example: 101 means 1% cumulative inflation since base date.</td></tr>
-<tr><td>Vietnam CPI index since base</td><td>100.0</td><td>Example: 101 means 1% cumulative inflation since base date.</td></tr>
-<tr><td>China CPI index since base</td><td>100.0</td><td>Example: 100.5 means 0.5% cumulative inflation since base date.</td></tr>
+<tr><td>Bangladesh cumulative inflation since 1 January 2025</td><td>0.0%</td><td>Update from CPI index.</td></tr>
+<tr><td>India cumulative inflation since 1 January 2025</td><td>0.0%</td><td>Update from CPI index.</td></tr>
+<tr><td>Vietnam cumulative inflation since 1 January 2025</td><td>0.0%</td><td>Update from CPI index.</td></tr>
+<tr><td>China cumulative inflation since 1 January 2025</td><td>0.0%</td><td>Update from CPI index.</td></tr>
 
       </tbody>
     </table>
 
-    <h2>4. How to Calculate BDT Overvaluation Yourself</h2>
+    <h2>4. Calculation Methodology</h2>
 
     <h3>A. Cross-rate calculation</h3>
-    <div class="formula">BDT per competitor currency = USD/BDT ÷ USD/competitor currency
+    <div class="formula">BDT per competitor currency = USD/BDT ÷ USD/competitor currency</div>
 
-Example:
-USD/BDT = 122.62
-USD/INR = 94.787
-
-BDT/INR = 122.62 ÷ 94.787 = 1.2936 BDT per INR</div>
-
-    <h3>B. Inflation-adjusted required exchange rate</h3>
+    <h3>B. Required exchange rate based on cumulative inflation differential</h3>
     <div class="formula">Required BDT/competitor rate today
 =
-Base BDT/competitor rate
+Base BDT/competitor rate on 1 Jan 2025
 ×
-(Bangladesh CPI index today ÷ Bangladesh CPI index at base)
+(1 + Bangladesh cumulative inflation since 1 Jan 2025)
 ÷
-(Competitor CPI index today ÷ Competitor CPI index at base)</div>
+(1 + competitor cumulative inflation since 1 Jan 2025)</div>
 
     <h3>C. Overvaluation calculation</h3>
     <div class="formula">Overvaluation (%)
@@ -196,58 +191,29 @@ Base BDT/competitor rate
 (Required BDT/competitor rate - Actual BDT/competitor rate)
 ÷
 Actual BDT/competitor rate
-× 100
+× 100</div>
 
-If the number is positive:
-BDT is overvalued against that competitor.
-
-If the number is negative:
-BDT is undervalued against that competitor.</div>
-
-    <h3>D. Why inflation differentials accumulate</h3>
+    <h3>D. Interpretation</h3>
     <p>
-      Suppose Bangladesh inflation since the base date is 9% and India inflation is 4%.
-      Then Bangladesh's price level has risen roughly 5% more than India's.
-      If BDT does not depreciate by roughly that amount against INR, Bangladesh loses real price competitiveness.
-      This gap accumulates over time.
+      If Bangladesh cumulative inflation is higher than competitor inflation, BDT must depreciate against that competitor's currency to preserve real export competitiveness.
+      If BDT does not depreciate enough, the model records BDT overvaluation.
     </p>
 
-    <h2>5. Headline Context</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Indicator</th>
-          <th>Latest reference value</th>
-          <th>Use</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Bangladesh CPI YoY</td><td>8.71%</td><td>Context only. Use cumulative CPI index for calculation.</td></tr>
-        <tr><td>India CPI YoY</td><td>3.40%</td><td>Context only. Use cumulative CPI index for calculation.</td></tr>
-        <tr><td>Vietnam CPI YoY</td><td>4.65%</td><td>Context only. Use cumulative CPI index for calculation.</td></tr>
-        <tr><td>China CPI YoY</td><td>1.00%</td><td>Context only. Use cumulative CPI index for calculation.</td></tr>
-        <tr><td>Bangladesh REER-implied USD/BDT</td><td>126.03</td><td>Broad REER anchor.</td></tr>
-        <tr><td>Market USD/BDT</td><td>122.62</td><td>Used for broad REER comparison.</td></tr>
-      </tbody>
-    </table>
-
-    <h2>6. Reproducibility Checklist</h2>
+    <h2>5. Data Update Rule</h2>
     <ol>
-      <li>Keep the base exchange rates fixed at the base date.</li>
-      <li>Update current USD/BDT, USD/INR, USD/VND and USD/CNY.</li>
-      <li>Update cumulative CPI index since the base date for Bangladesh, India, Vietnam and China.</li>
-      <li>Calculate actual current BDT cross-rates.</li>
-      <li>Calculate required inflation-adjusted BDT cross-rates.</li>
-      <li>Compare required rates with actual rates.</li>
-      <li>If required BDT depreciation is greater than actual depreciation, BDT is overvalued.</li>
+      <li>Keep 1 January 2025 as the fixed base date.</li>
+      <li>Update current USD/BDT, USD/INR, USD/VND and USD/CNY every week.</li>
+      <li>Update cumulative CPI inflation from 1 January 2025 for Bangladesh, India, Vietnam and China.</li>
+      <li>Do not use only year-on-year inflation. Use cumulative inflation since the base date.</li>
+      <li>Compare actual BDT depreciation with required BDT depreciation.</li>
     </ol>
 
     <div class="warning">
-      <strong>Important caution:</strong> This dashboard estimates export-competitiveness misalignment, not a trading forecast.
-      Exact valuation requires full trade weights, price indices, base periods, productivity trends, terms of trade, capital flows and reserve policy.
+      <strong>Important caution:</strong> The base exchange rates and cumulative inflation values must be verified from official sources.
+      The structure is correct, but the dashboard output is only as accurate as the input data.
     </div>
 
-    <h2>7. Source Links</h2>
+    <h2>6. Source Links</h2>
     <div class="grid">
       <div class="card">
         <h3>Methodology Sources</h3>
@@ -264,7 +230,6 @@ BDT is undervalued against that competitor.</div>
         <ul>
           <li><a href="https://www.bb.org.bd/" target="_blank">Bangladesh Bank</a></li>
           <li><a href="https://bbs.gov.bd/" target="_blank">Bangladesh Bureau of Statistics</a></li>
-          <li><a href="https://today.thefinancialexpress.com.bd/last-page/inflation-pushes-reer-up-143-points-in-mar-1776877886" target="_blank">Financial Express report on Bangladesh REER, March 2026</a></li>
         </ul>
       </div>
 
@@ -272,8 +237,7 @@ BDT is undervalued against that competitor.</div>
         <h3>India Sources</h3>
         <ul>
           <li><a href="https://www.rbi.org.in/scripts/referenceratearchive.aspx" target="_blank">Reserve Bank of India Reference Rate Archive</a></li>
-          <li><a href="https://www.msei.in/markets/currency/historical-data/rbireferenceratearchives" target="_blank">MSEI RBI Reference Rate Archive</a></li>
-          <li><a href="https://www.mospi.gov.in/" target="_blank">India MOSPI CPI releases</a></li>
+          <li><a href="https://www.mospi.gov.in/" target="_blank">India MOSPI CPI Releases</a></li>
         </ul>
       </div>
 
@@ -297,24 +261,20 @@ BDT is undervalued against that competitor.</div>
       <div class="card">
         <h3>Cross-check Sources</h3>
         <ul>
-          <li><a href="https://data.worldbank.org/indicator/PX.REX.REER" target="_blank">World Bank REER indicator</a></li>
+          <li><a href="https://data.worldbank.org/indicator/PX.REX.REER" target="_blank">World Bank REER Indicator</a></li>
           <li><a href="https://data.imf.org/" target="_blank">IMF Data Portal</a></li>
-          <li><a href="https://www.wto.org/" target="_blank">WTO trade data</a></li>
+          <li><a href="https://www.wto.org/" target="_blank">WTO Trade Data</a></li>
         </ul>
       </div>
     </div>
 
-    <h2>8. Simple Interpretation Rule</h2>
+    <h2>7. Simple Interpretation Rule</h2>
     <p>
-      If Bangladesh inflation is higher than India, Vietnam or China, but BDT does not depreciate enough against those currencies,
-      then BDT appreciates in real terms. This acts like a hidden tax on Bangladesh exporters because their costs rise faster than competitor costs
-      while the exchange rate does not compensate them.
+      Since 1 January 2025, if Bangladesh prices have risen faster than India, Vietnam or China, then BDT must depreciate enough against INR, VND and CNY to keep Bangladesh exporters equally competitive.
+      If the exchange rate does not adjust, the accumulated inflation gap becomes real BDT overvaluation.
     </p>
 
-    <p class="source-note">
-      <strong>Last update note:</strong> Update the CURRENT_DATA section in the Python script with the latest exchange rates and cumulative CPI indices.
-      The weekly GitHub Action will then regenerate this page automatically.
-    </p>
+    <p><strong>Last update note:</strong> Update the CURRENT_DATA section weekly. The GitHub Action will regenerate this page automatically.</p>
   </div>
 </body>
 </html>
