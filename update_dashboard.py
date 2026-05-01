@@ -57,7 +57,7 @@ CURRENT_DATA = {
 "BD_CUM_INFLATION": 9.94,
 "IN_CUM_INFLATION": 3.12,
 "VN_CUM_INFLATION": 6.00,
-"CN_CUM_INFLATION": 0.80,
+"CN_CUM_INFLATION": 0.50,
 }
 
 # ------------------------------------------------------------
