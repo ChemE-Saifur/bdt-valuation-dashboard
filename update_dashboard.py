@@ -48,8 +48,8 @@ BASE_DATA = {
 
 CURRENT_DATA = {
     "USD_BDT": 122.62,
-    "USD_INR": 94.787,
-    "USD_VND": 25113.00,
+    "USD_INR": 95.2417,
+"USD_VND": 26368.00,
     "USD_CNY": 6.86,
 
     # Cumulative inflation since 1 January 2025.
