@@ -54,10 +54,10 @@ CURRENT_DATA = {
 
     # Cumulative inflation since 1 January 2025.
     # Replace these with actual cumulative CPI inflation.
-    "BD_CUM_INFLATION": 0.0,
-    "IN_CUM_INFLATION": 0.0,
-    "VN_CUM_INFLATION": 0.0,
-    "CN_CUM_INFLATION": 0.0,
+"BD_CUM_INFLATION": 9.94,
+"IN_CUM_INFLATION": 3.12,
+"VN_CUM_INFLATION": 6.00,
+"CN_CUM_INFLATION": 0.80,
 }
 
 # ------------------------------------------------------------
